@@ -5,38 +5,30 @@
       "runtime": "vercel-php@0.6.0"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)\\.(css|js|webp|png|jpg|mp4|svg|eot|ttf|woff|woff2)",
-      "dest": "/$1.$2"
+      "source": "/services",
+      "destination": "/api/services.php"
     },
     {
-      "src": "/services",
-      "dest": "/api/services.php"
+      "source": "/contact",
+      "destination": "/api/contact.php"
     },
     {
-      "src": "/contact",
-      "dest": "/api/contact.php"
+      "source": "/news",
+      "destination": "/api/news.php"
     },
     {
-      "src": "/news",
-      "dest": "/api/news.php"
+      "source": "/tickets",
+      "destination": "/api/tickets.php"
     },
     {
-      "src": "/tickets",
-      "dest": "/api/tickets.php"
+      "source": "/tickets-2",
+      "destination": "/api/tickets-2.php"
     },
     {
-      "src": "/tickets-2",
-      "dest": "/api/tickets-2.php"
-    },
-    {
-      "src": "/(.*).php",
-      "dest": "/api/$1.php"
-    },
-    {
-      "src": "/",
-      "dest": "/api/index.php"
+      "source": "/",
+      "destination": "/api/index.php"
     }
   ],
   "cleanUrls": true
