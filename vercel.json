@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)\\.(css|js|webp|png|jpg|mp4|svg|eot|ttf|woff|woff2)",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/services",
+      "dest": "/services.php"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.php"
+    },
+    {
+      "src": "/news",
+      "dest": "/news.php"
+    },
+    {
+      "src": "/tickets",
+      "dest": "/tickets.php"
+    },
+    {
+      "src": "/tickets-2",
+      "dest": "/tickets-2.php"
+    },
+    {
+      "src": "/(.*).php",
+      "dest": "/$1.php"
+    },
+    {
+      "src": "/",
+      "dest": "/index.php"
+    }
+  ]
+}
