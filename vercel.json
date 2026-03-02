@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "*.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.6.0"
     }
   },
@@ -12,31 +12,31 @@
     },
     {
       "src": "/services",
-      "dest": "/services.php"
+      "dest": "/api/services.php"
     },
     {
       "src": "/contact",
-      "dest": "/contact.php"
+      "dest": "/api/contact.php"
     },
     {
       "src": "/news",
-      "dest": "/news.php"
+      "dest": "/api/news.php"
     },
     {
       "src": "/tickets",
-      "dest": "/tickets.php"
+      "dest": "/api/tickets.php"
     },
     {
       "src": "/tickets-2",
-      "dest": "/tickets-2.php"
+      "dest": "/api/tickets-2.php"
     },
     {
       "src": "/(.*).php",
-      "dest": "/$1.php"
+      "dest": "/api/$1.php"
     },
     {
       "src": "/",
-      "dest": "/index.php"
+      "dest": "/api/index.php"
     }
   ]
 }
