@@ -188,7 +188,6 @@ body {
   font-size: var(--body-font-size);
   font-weight: var(--body-font-weight);
   color: var(--body-font-color);
-  margin: 0;
   padding: 0;
   line-height: 1.8em;
   word-spacing: 0px;
@@ -227,19 +226,11 @@ a:hover {
 header {
   width: 100%;
   position: absolute;
-  top: 0 !important;
   left: 0;
   z-index: 1001;
   background: var(--bg-dark-1);
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
 }
-
-header .container {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
 
 header.header-s1 {
   top: 0;
@@ -1273,6 +1264,7 @@ section {
 }
 
 section:not(.relative) {}
+
 
 section.no-bg,
 #content.no-bg {

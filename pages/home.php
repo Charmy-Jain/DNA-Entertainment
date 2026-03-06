@@ -323,7 +323,7 @@
                     </div>
 
                     <div class="col-md-8">
-                        <h2 class="fs-52 mb-3 wow fadeInUp" data-wow-delay="0s">“You are only as good as your last show”</h2>
+                        <h2 class="fs-40 mb-3 wow fadeInUp" data-wow-delay="0s" style="white-space: nowrap;">“You are only as good as your last show”</h2>
                         
                         <div class="mb-5">
                             <h5 class="wow fadeInUp mb-1 text-uppercase fw-bold" data-wow-delay=".2s">Dr. T. Venkat Vardhan</h5>

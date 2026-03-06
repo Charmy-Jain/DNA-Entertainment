@@ -194,9 +194,8 @@
         }
     </style>
 
-        <section id="section-hero-about" class="section-dark text-light jarallax relative mh-800" data-video-src="mp4:/video/2.mp4" data-jarallax-video="mp4:/video/2.mp4">
+        <section id="section-hero-about" class="section-dark text-light jarallax relative mh-800" data-video-src="mp4:/video/4.mp4" data-jarallax-video="mp4:/video/4.mp4">
             <img src="/images/background/5.webp" class="jarallax-img" alt="">
-            <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
             <div class="abs abs-centered z-2 w-80">
