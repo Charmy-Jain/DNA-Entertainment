@@ -117,7 +117,7 @@ Table of content:
   --mainmenu-letter-spacing: 0;
   --mainmenu-text-transform: none;
   /* header logo */
-  --logo-width: 250px;
+  --logo-width: 200px;
   --logo-footer-width: 150px;
   /* misc */
   --border-default: solid 1px rgba(30, 30, 30, 1);
@@ -138,10 +138,10 @@ Table of content:
   --btn-color: #fff;
   --btn-hover-bg: var(--bg-dark-1);
   --btn-font-family: var(--body-font);
-  --btn-font-size: 12px;
-  --btn-font-weight: 800;
+  --btn-font-size: 11px;
+  --btn-font-weight: 700;
   --btn-letter-spacing: 2px;
-  --btn-padding: 4px 20px;
+  --btn-padding: 2px 14px;
   --btn-rounded: 6px;
   --btn-text-decoration: none;
   --btn-text-transform: uppercase;
@@ -186,7 +186,7 @@ body {
   overflow: hidden;
   font-family: var(--body-font);
   font-size: var(--body-font-size);
-  font-weight: var(--body-font-weight);;
+  font-weight: var(--body-font-weight);
   color: var(--body-font-color);
   padding: 0;
   line-height: 1.8em;
@@ -329,7 +329,7 @@ header.smaller {
   -o-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: none;*/
+  border: none;
 }
 
 header.header-mobile.header-float .header-inner,
@@ -787,8 +787,8 @@ header.smaller #mainmenu>li::before{
 #mainmenu a {
   position: relative;
   display: inline-block;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   text-decoration: none;
   color: #ffffff;
   text-align: center;
@@ -2314,7 +2314,7 @@ header.header-light .h-phone span{
 }
 
 .post-image{
-  overflow: hidden;x
+  overflow: hidden;
 }
 .post-image img {
   width: 100%;
@@ -4184,7 +4184,7 @@ ul.cols-2{
 
 .ul-style-4 li {
   margin: 2px 0 2px 0;
-  display: ;
+  display: block;
   font-weight: 500;
 }
 
@@ -6849,7 +6849,8 @@ footer .widget{
   border-color: #555;
 }
 
-.widget_tags li a:hover border-color: #eceff3;
+.widget_tags li a:hover {
+  border-color: #eceff3;
 }
 
 footer .widget {
@@ -7044,7 +7045,7 @@ footer .tiny-border span {
 
 
 .de-step-s1 {
-  overflow: ;
+  overflow: hidden;
   position: relative;
   padding: 0 25px;
   height: 100%;
@@ -7165,7 +7166,7 @@ footer .tiny-border span {
 
 
 .owl-carousel.no-hide .owl-stage-outer{
-  overflow: visible; !important;
+  overflow: visible !important;
 }
 
 .grayscale{
@@ -7911,7 +7912,39 @@ footer .tiny-border span {
 .absolute,.abs { position: absolute;}
 .abs-center { left: 50%; transform: translateX(-50%);}
 .abs-middle{ top: 50%;  transform: translateY(-50%);}
-.abs-centered{ position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);}
+.abs-centered { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.abs-centered > * {
+  pointer-events: auto;
+}
+
+/* custom scrollbar styled */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) rgba(255, 255, 255, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  display: block;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
 .relative,.position-relative { position: relative; }
 
 /* z-index */
@@ -7920,6 +7953,7 @@ footer .tiny-border span {
 .z-3{ z-index:3 }
 .z-4{ z-index:4 }
 .z-1000 { z-index: 1000;}
+.z-2000 { z-index: 2000;}
 
 .auto-height{height: 100%;padding-top: 100%;}
 
@@ -13126,4 +13160,242 @@ img {
     margin-left: auto;
     width: auto;
   }
+}
+
+/* Custom Event Schedule Styles */
+.event-item-bg {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 30px 40px;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.event-item-bg:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.event-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.event-info-box .info-title {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+.event-info-box .info-desc {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.event-info-box i {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+/* Tabs Styling */
+.event-schedule-tab {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    min-width: 150px;
+    border-radius: 12px !important; /* Semi-square/Modern shape */
+    transition: all 0.33s ease !important;
+    padding: 15px 30px !important; 
+    margin-bottom: 30px;
+    position: relative;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    line-height: 1.2;
+}
+
+.event-schedule-tab span:first-child {
+    font-size: 15px !important; /* Day label size */
+    letter-spacing: 0.5px;
+}
+
+.event-schedule-tab span:last-child {
+    font-size: 11px !important; /* Date size */
+    opacity: 0.7;
+}
+
+.event-schedule-tab.active {
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+    border-color: transparent !important;
+    box-shadow: 0 10px 30px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Triangle arrow for active tab - using theme color */
+.event-schedule-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--primary-color);
+}
+
+.event-schedule-tab:hover:not(.active) {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Button override for pills */
+.btn-main.fx-slide {
+    border-radius: 12px !important;
+    padding: 12px 35px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+.event-item-bg h3 {
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.event-item-bg p {
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+/* Newsletter Premium Styling */
+.newsletter-gradient {
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background/patter.png'); /* Pattern overlay if exists */
+    opacity: 0.1;
+}
+
+.newsletter-input {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border-radius: 50px !important;
+    height: 60px !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.newsletter-input:focus {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
+.newsletter-btn {
+    width: 46px;
+    height: 46px;
+    background: white !important;
+    color: black !important;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.1);
+    background: #f0f0f0 !important;
+}
+
+.newsletter-gradient h2 {
+    font-size: 48px !important;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    color: white !important;
+    opacity: 1 !important;
+}
+/* Professional Contact Form UI Refinement */
+#contact_form .form-control-custom,
+#contact_form select.form-control-custom,
+#contact_form textarea.form-control-custom {
+    background: rgba(255, 255, 255, 0.05) !important;
+    background-color: #1a1e42 !important; /* Lighter background color */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Slightly more visible border */
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    padding: 12px 20px !important;
+    width: 100%;
+    outline: none !important;
+    font-size: 14px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+#contact_form .form-control-custom:focus {
+    background-color: #121535 !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+#contact_form .form-control-custom::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#contact_form select.form-control-custom {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23764DF0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C2.185 5.355 2.401 4.88 2.81 4.88h9.38c.409 0 .626.475.36.778l-4.796 5.482a.5.5 0 0 1-.727 0z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 25px center !important;
+}
+
+#contact_form .btn-border-white {
+    background: var(--primary-color) !important;
+    border: none !important;
+    color: white !important;
+    padding: 14px 40px !important; /* Reduced padding */
+    font-size: 13px !important; /* Scale down button */
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.4);
+}
+
+#contact_form .btn-border-white:hover {
+    background: var(--secondary-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(var(--primary-color-rgb), 0.5);
+}
+
+/* Fix for the Odd White Box */
+#contact_form input, #contact_form select, #contact_form textarea {
+    background-image: none; /* Clear any background patterns */
 }

@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $recipient = "contact@aivent.com";
+    $recipient = "dna@dnanetworks.com";
     $subject = "New Contact from $name";
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n";
