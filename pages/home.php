@@ -2,22 +2,21 @@
 
 <?php include(__DIR__ . '/../includes/header.php'); ?>
 
-        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:/video/2.mp4" data-jarallax-video="mp4:/video/2.mp4">
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:/video/3.mp4" data-jarallax-video="mp4:/video/3.mp4">
             <img src="/images/background/8.webp" class="jarallax-img" alt="">
-            <div class="gradient-edge-top op-6 h-50 color"></div>
+            <div class="gradient-edge-top op-2 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-8"></div>
             <div class="abs abs-centered z-2 w-80">
                 <div class="container wow scaleIn" data-wow-duration="3s">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <div class="subtitle">The Future of Intelligence</div>
-                            <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">AI Summit 2026</h1>
+                            <h1 class="fs-80 text-uppercase fs-sm-10vw mb-4 lh-1">Entertainment Redefined</h1>
 
                             <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
                                     <i class="fa fa-calendar id-color me-3"></i>
-                                    <h4 class="mb-0">October 1Ã¢â‚¬â€œ5, 2026</h4>
+                                    <h4 class="mb-0">October 14, 2026</h4>
                                 </div>
 
                                 <div class="d-flex justify-content-center align-items-center mx-4">
