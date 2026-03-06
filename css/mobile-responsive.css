@@ -1,0 +1,418 @@
+/* ================================================== */
+/* COMPREHENSIVE GLOBAL MOBILE RESPONSIVENESS - ALL PAGES */
+/* DNA Entertainment Project                             */
+/* Applies to: max-width 992px and below                  */
+/* ZERO changes to laptop/desktop view                    */
+/* ================================================== */
+
+@media only screen and (max-width: 992px) {
+
+  /* ================================================================
+     UNIVERSAL JARALLAX FIX — ALL HERO SECTIONS (every page)
+     Jarallax auto-disables on mobile → image collapses out of section.
+     This forces the bg image to ALWAYS cover the full hero section
+     so text stays overlaid ON the image, not below it.
+     Covers: Home, About, Services, Contact, News, Careers,
+             Clientele, Sports, Music, Corporate, Special Events
+     ================================================================ */
+  section.jarallax {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  section.jarallax img.jarallax-img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    z-index: 0 !important;
+  }
+  /* Ensure overlays and text stay above the image */
+  section.jarallax .sw-overlay,
+  section.jarallax .gradient-edge-top,
+  section.jarallax .gradient-edge-bottom { z-index: 1 !important; }
+  section.jarallax .abs { z-index: 2 !important; }
+
+  /* ---- GLOBAL LAYOUT ---- */
+  body { overflow-x: hidden !important; }
+  section { padding-top: 40px !important; padding-bottom: 40px !important; }
+  .pt-80 { padding-top: 40px !important; }
+  .pb-80 { padding-bottom: 40px !important; }
+  .pt-100 { padding-top: 50px !important; }
+  .pb-100 { padding-bottom: 50px !important; }
+  .p-60 { padding: 20px !important; }
+  .gx-5 { --bs-gutter-x: 1rem !important; }
+
+  /* ---- HERO SECTIONS (all inner pages) ---- */
+  .mh-500 { min-height: 50vh !important; height: auto !important; }
+  .abs.w-80.bottom-10 { position: relative !important; width: 100% !important; bottom: auto !important; padding: 30px 0 !important; }
+  /* Heading size reduced to prevent overflow on mobile */
+  .fs-sm-10vw { font-size: 7.5vw !important; }
+  .lh-1 { line-height: 1.1 !important; }
+
+  /* ---- HOMEPAGE HERO: Center date & location on mobile ---- */
+  #section-hero .d-block.d-md-flex {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  /* ---- ABOUT PAGE: 3D Fan / Sliding Cards ---- */
+  .sliding-3d-wrap {
+    height: 280px !important;
+    perspective: 800px !important;
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+    overflow: hidden !important;
+  }
+  .sliding-card {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .s-card-1 { transform: translateX(-140px) translateZ(-300px) rotateY(45deg) !important; }
+  .s-card-2 { transform: translateX(-105px) translateZ(-230px) rotateY(35deg) !important; }
+  .s-card-3 { transform: translateX(-70px) translateZ(-160px) rotateY(25deg) !important; }
+  .s-card-4 { transform: translateX(-35px) translateZ(-80px) rotateY(15deg) !important; }
+  .s-card-5 { transform: translateX(0) translateZ(60px) rotateY(0deg) !important; }
+  .s-card-6 { transform: translateX(35px) translateZ(-80px) rotateY(-15deg) !important; }
+  .s-card-7 { transform: translateX(70px) translateZ(-160px) rotateY(-25deg) !important; }
+  .s-card-8 { transform: translateX(105px) translateZ(-230px) rotateY(-35deg) !important; }
+
+  /* ---- SERVICES PAGE: Service Cards - stack vertically ---- */
+  .service-card {
+    flex-direction: column !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+  .service-card-text {
+    padding: 20px !important;
+    order: 2 !important;
+    flex: 1 !important;
+  }
+  .service-card-image {
+    height: 200px !important;
+    order: 1 !important;
+    border-radius: 15px 15px 0 0 !important;
+    width: 100% !important;
+    flex: none !important;
+  }
+  .service-cutout { display: none !important; }
+
+  /* ---- TICKETS PAGE ---- */
+  #section-tickets .p-40 { padding: 20px !important; }
+  #section-tickets h2.fs-40 { font-size: 24px !important; }
+  #section-tickets .col-lg-4 { margin-top: 30px !important; }
+
+  /* ---- CONTACT PAGE ---- */
+  .bg-dark-2.rounded-1.p-60 { padding: 20px !important; border-radius: 10px !important; }
+  .ms-80px { margin-left: 70px !important; }
+
+  /* ---- GENERAL IMAGES ---- */
+  img { max-width: 100% !important; height: auto !important; }
+  .w-100 { width: 100% !important; }
+
+  /* ---- SPACING HELPERS ---- */
+  .spacer-single { height: 20px !important; }
+  .spacer-double { height: 30px !important; }
+  .mb-sm-30 { margin-bottom: 20px !important; }
+
+  /* ---- FOOTER ---- */
+  footer .col-lg-3,
+  footer .col-lg-4,
+  footer .col-lg-2 { margin-bottom: 24px !important; }
+  footer .text-end { text-align: left !important; }
+
+  /* ---- ACCORDION (FAQ on home) ---- */
+  .accordion-section-title { font-size: 14px !important; padding: 12px !important; }
+  .accordion-section-content { font-size: 13px !important; padding: 10px 12px !important; }
+
+  /* ---- EVENT PAGES (sports / music / corporate / special) ---- */
+  /* Hero countdown on event pages */
+  .de-countdown { flex-wrap: wrap !important; gap: 8px !important; }
+  .de-countdown > div { min-width: 60px !important; padding: 8px !important; }
+
+  /* ---- MARQUEE / TEXT SCROLL ---- */
+  .de-marquee-list { font-size: 28px !important; }
+
+  /* ---- ABOUT PAGE: CSR Section ---- */
+  /* Shrink the big heading on mobile */
+  #section-csr h2.fs-60 { font-size: 32px !important; line-height: 1.2 !important; margin-bottom: 20px !important; }
+  /* Make text box padding compact and border subtle */
+  #section-csr .p-4.border { padding: 16px !important; border-width: 1px !important; border-radius: 10px !important; }
+  #section-csr p.fs-15 { font-size: 14px !important; line-height: 1.7 !important; }
+  /* CSR cards row spacing */
+  #section-csr .row.mb-5 { margin-bottom: 20px !important; }
+
+  /* ---- ABOUT PAGE: CSR Banner heading ---- */
+  .fs-80.fs-sm-40 { font-size: 32px !important; letter-spacing: 2px !important; }
+  .fs-60.lh-1 { font-size: 30px !important; }
+
+  /* ---- ABOUT PAGE: CSR HERO BANNER - Text on top of image ---- */
+  /* Ensure the container stays relatively positioned so abs-centered works */
+  .section-dark.p-0.overflow-hidden .container-fluid.p-0.relative {
+    position: relative !important;
+    display: block !important;
+  }
+  /* Keep the image at a good mobile height */
+  .section-dark.p-0.overflow-hidden .container-fluid img.w-100 {
+    height: 280px !important;
+    object-fit: cover !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  /* Force the abs-centered overlay to sit on top of the image */
+  .section-dark.p-0.overflow-hidden .abs-centered {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+    width: 90% !important;
+    text-align: center !important;
+    pointer-events: none !important;
+  }
+  /* Scale down the CSR heading text to fit mobile screen */
+  .section-dark.p-0.overflow-hidden .abs-centered h1 {
+    font-size: 28px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* ---- CSR CARDS ---- */
+  .csr-card { border-radius: 12px !important; overflow: hidden !important; }
+  .csr-img-wrap img { height: 180px !important; object-fit: cover !important; width: 100% !important; }
+
+  /* ---- ABOUT PAGE: Our Story Section ---- */
+  #section-story { padding: 40px 0 !important; overflow-x: hidden !important; }
+  /* Center align text on mobile + prevent overflow */
+  #section-story .story-text { 
+    text-align: center !important; 
+    order: 1 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  #section-story .col-lg-12.text-center { text-align: center !important; }
+  /* Reduce text size and tight spacing, prevent line overflow */
+  #section-story p { 
+    font-size: 14px !important; 
+    line-height: 1.7 !important; 
+    margin-top: 12px !important; 
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    padding: 0 !important;
+  }
+  /* 3D cards column below text */
+  #section-story .col-lg-6:last-child { order: 2 !important; margin-top: 30px !important; }
+  /* Read More button centered */
+  #btn-show-more { 
+    display: block !important;
+    margin: 16px auto 0 auto !important; 
+    padding: 8px 20px !important; 
+    font-size: 13px !important;
+    width: fit-content !important;
+  }
+
+  /* ================================================================
+     ALL EVENT PAGES: Sports / Music / Corporate / Special Events
+     (all share #section-hero-sports and .event-item-bg classes)
+     ================================================================ */
+
+  /* ---- Hero: reduce the giant fs-120 heading ---- */
+  #section-hero-sports h1.fs-120 {
+    font-size: clamp(32px, 9vw, 72px) !important;
+    line-height: 1.05 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* ---- Hero: shrink the description paragraph ---- */
+  #section-hero-sports .fs-24 {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+    padding: 0 8px !important;
+  }
+
+  /* ---- Hero: hero min-height reduced ---- */
+  #section-hero-sports.mh-800 {
+    min-height: 70vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* ---- CRITICAL FIX: Jarallax disables on mobile, image collapses ----
+     Force the jarallax-img to cover the full section so text stays ON the image */
+  #section-hero-sports img.jarallax-img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 0 !important;
+  }
+
+  /* ---- Hero: single dropdown button — full-width on mobile ---- */
+  #section-hero-sports .dropdown-v2.d-inline-block {
+    display: block !important;
+    width: 90% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+  #section-hero-sports .dropdown-v2 button {
+    width: 100% !important;
+  }
+
+  /* ---- Hero: 3-column music filter row — stack vertically ---- */
+  #section-hero-sports .row.g-0.mt-3 {
+    flex-direction: column !important;
+    border: none !important;
+    margin-top: 12px !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  #section-hero-sports .row.g-0.mt-3 .col-md-4 {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+  }
+  #section-hero-sports .row.g-0.mt-3 .col-md-4:last-child {
+    border-bottom: none !important;
+  }
+
+  /* ================================================================
+     SCHEDULE SECTION  (#section-events)
+     ================================================================ */
+
+  /* ---- Schedule heading ---- */
+  #section-events { padding-top: 40px !important; padding-bottom: 40px !important; }
+  #section-events .container { margin-top: 0 !important; }
+  #section-events h2.fs-48 { font-size: 26px !important; line-height: 1.2 !important; }
+
+  /* ---- Day tab pills — horizontal scroll ---- */
+  #section-events .nav-pills {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+    scrollbar-width: none !important;
+  }
+  #section-events .nav-pills::-webkit-scrollbar { display: none !important; }
+  #section-events .nav-item { flex-shrink: 0 !important; }
+  /* Reduce tab button padding on mobile */
+  #section-events .nav-link.event-schedule-tab {
+    padding: 8px 18px !important;
+    font-size: 13px !important;
+  }
+
+  /* ---- Event item cards — stack vertically ---- */
+  .event-item-bg {
+    flex-direction: column !important;
+    padding: 20px 16px !important;
+    align-items: flex-start !important;
+  }
+
+  /* All cols inside event card go full width */
+  .event-item-bg .col-lg-4,
+  .event-item-bg .col-lg-5,
+  .event-item-bg .col-lg-3,
+  .event-item-bg .col-lg-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 16px !important;
+    text-align: left !important;
+  }
+
+  /* Title col */
+  .event-item-bg .col-lg-4:first-child,
+  .event-item-bg .col-lg-5:first-child {
+    padding-left: 0 !important;
+  }
+  .event-item-bg h3.fs-24 { font-size: 18px !important; margin-bottom: 6px !important; }
+  .event-item-bg p.fs-15 { font-size: 13px !important; }
+
+  /* Event image — full width, fixed height */
+  .event-card-img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    display: block !important;
+  }
+
+  /* Info box (time + location) */
+  .event-info-box { padding-left: 0 !important; }
+  .event-info-box .ps-lg-4 { padding-left: 0 !important; }
+  .info-title { font-size: 14px !important; display: block !important; }
+  .info-desc { font-size: 12px !important; display: block !important; }
+
+  /* Buy Ticket button col — left aligned */
+  .event-item-bg .col-lg-2:last-child {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ================================================================
+     NEWSLETTER CTA SECTION (bottom of all event pages)
+     ================================================================ */
+  .newsletter-gradient {
+    padding: 40px 20px !important;
+  }
+  .newsletter-gradient h2.fs-60 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 24px !important;
+  }
+  .newsletter-input { font-size: 14px !important; }
+}
+
+/* ---- 480px: Smallest phones ---- */
+@media only screen and (max-width: 480px) {
+
+  /* ---- GENERAL ---- */
+  .container { padding-left: 12px !important; padding-right: 12px !important; }
+
+  /* ---- ABOUT: 3D cards even smaller ---- */
+  .sliding-3d-wrap { height: 200px !important; }
+  .sliding-card { width: 150px !important; height: 150px !important; }
+  .s-card-1 { transform: translateX(-100px) translateZ(-200px) rotateY(45deg) !important; }
+  .s-card-2 { transform: translateX(-75px) translateZ(-160px) rotateY(35deg) !important; }
+  .s-card-3 { transform: translateX(-50px) translateZ(-120px) rotateY(25deg) !important; }
+  .s-card-4 { transform: translateX(-25px) translateZ(-60px) rotateY(15deg) !important; }
+  .s-card-5 { transform: translateX(0) translateZ(40px) rotateY(0deg) !important; }
+  .s-card-6 { transform: translateX(25px) translateZ(-60px) rotateY(-15deg) !important; }
+  .s-card-7 { transform: translateX(50px) translateZ(-120px) rotateY(-25deg) !important; }
+  .s-card-8 { transform: translateX(75px) translateZ(-160px) rotateY(-35deg) !important; }
+
+  /* ---- CONTACT: address icon offset ---- */
+  .ms-80px { margin-left: 60px !important; }
+  .abs.fs-28.p-3 { font-size: 18px !important; padding: 8px !important; }
+
+  /* ---- HERO TEXT ---- */
+  .fs-sm-10vw { font-size: 8vw !important; }
+
+  /* ---- SERVICES ---- */
+  .service-card-image { height: 160px !important; }
+
+  /* ---- TICKETS ---- */
+  #section-tickets h2.fs-40 { font-size: 20px !important; }
+  #section-tickets h3 { font-size: 18px !important; }
+
+  /* ---- MARQUEE ---- */
+  .de-marquee-list { font-size: 22px !important; }
+}

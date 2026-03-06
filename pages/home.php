@@ -323,7 +323,7 @@
                     </div>
 
                     <div class="col-md-8">
-                        <h2 class="fs-40 mb-3 wow fadeInUp" data-wow-delay="0s" style="white-space: nowrap;">“You are only as good as your last show”</h2>
+                        <h2 class="fs-40 mb-3 wow fadeInUp nowrap-desktop" data-wow-delay="0s">“You are only as good as your last show”</h2>
                         
                         <div class="mb-5">
                             <h5 class="wow fadeInUp mb-1 text-uppercase fw-bold" data-wow-delay=".2s">Dr. T. Venkat Vardhan</h5>
@@ -1066,7 +1066,7 @@
                 <input type="email" class="form-control form-control-lg text-center" placeholder="Enter Your Email Address" required>
               </div>
               <div class="col-auto mb-3 wow fadeInUp" data-wow-delay=".6s">
-                <button type="submit" class="btn bg-color text-light btn-lg px-4">SIGN UP</button>
+                <button type="submit" class="btn bg-color text-light btn-lg px-4">CONTACT NOW</button>
               </div>
 
               <div class="col-12 text-center wow fadeInUp" data-wow-delay=".8s">

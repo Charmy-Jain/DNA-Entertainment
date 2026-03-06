@@ -16,6 +16,8 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="/css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <!-- Mobile Responsiveness - All Pages -->
+    <link href="/css/mobile-responsive.css" rel="stylesheet" type="text/css" >
 </head>
 
 
