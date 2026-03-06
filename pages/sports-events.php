@@ -18,7 +18,7 @@
 
         <!-- Hero section -->
         <section id="section-hero-sports" class="section-dark text-light jarallax relative mh-800">
-            <img src="/images/background/5.webp" class="jarallax-img" alt="">
+            <img src="/images/background/12.png" class="jarallax-img" alt="">
             <div class="gradient-edge-top op-6 h-50 color"></div>
             <div class="gradient-edge-bottom"></div>
             <div class="sw-overlay op-5" style="background-color: rgba(20, 20, 20, 0.45);"></div>
