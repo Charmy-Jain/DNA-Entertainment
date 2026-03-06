@@ -11,4 +11,4 @@ RUN chown -R www-data:www-data /var/www/html/ \
     && chmod -R 755 /var/www/html/
 
 # Expose the default Apache port
-EXPOSE 
+EXPOSE 80
